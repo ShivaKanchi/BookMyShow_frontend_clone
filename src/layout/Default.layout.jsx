@@ -6,8 +6,9 @@ const DefaultLayoutHoc = (component) => ({ ...props }) => {
         <div>
             <Navbar />
             <component {...props} />
+            <div>Footer</div>
         </div>
-    )
-}
+    );
+};
 
-export default DefaultLayoutHoc
+export default DefaultLayoutHoc;
