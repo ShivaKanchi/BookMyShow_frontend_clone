@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../compnents/Navbar/navbar.Component'
+import Navbar from '../components/Navbar/navbar.Component'
 
 const DefaultLayoutHoc = (component) => ({ ...props }) => {
     return (
