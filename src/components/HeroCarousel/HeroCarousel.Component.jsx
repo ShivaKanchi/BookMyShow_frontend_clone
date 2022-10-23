@@ -4,6 +4,8 @@ const HeroCarousel = () => {
 
     const [images, setImages] = useState([]);
 
+    const settingsLG = {}
+    const settings = {}
     return (
         <>
             <div>HeroCarousel</div>
