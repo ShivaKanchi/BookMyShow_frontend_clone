@@ -1,4 +1,5 @@
 import React from 'react'
+import DefaultLayoutHoc from '../layout/Default.layout'
 
 const PlayPage = () => {
     return (
@@ -6,4 +7,4 @@ const PlayPage = () => {
     )
 }
 
-export default PlayPage
+export default DefaultLayoutHoc(PlayPage);
