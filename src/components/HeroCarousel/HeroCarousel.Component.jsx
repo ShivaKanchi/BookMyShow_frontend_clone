@@ -70,6 +70,12 @@ const HeroCarousel = () => {
         infinite: true,
         speed: 500,
         slideToScroll: 1,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
+        autoplay: true,
+        speed: 1000,
+        autoplaySpeed: 1000,
+        cssEase: "linear"
     }
     const settings = {
         arrows: true,
@@ -79,11 +85,16 @@ const HeroCarousel = () => {
         slideToScroll: 1,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
+        autoplay: true,
+        speed: 1000,
+        autoplaySpeed: 1000,
+        cssEase: "linear"
     };
     return (
         <>
             <div>HeroCarousel</div>
             <div className='lg:hidden '>
+
                 <HeroSlider {...settings}>
                     {
                         images.map((images) => (
