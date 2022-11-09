@@ -30,8 +30,38 @@ const EntertainmentCardSlider = () => {
         "https://in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:w-300/adventure-collection-202010140844.png",
 
     ];
-    const settings = {};
+    const settings = {
+        infinite: false,
+        autoplay: false,
+        slidesToShow: 5,
+        slidesToScroll: 4,
+        intialSlide: 0,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2,
+                },
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    intialSlide: 1
+                },
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            }
 
+        ]
+    };
     return (
         <>
             <Slider {...settings}>
