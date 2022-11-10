@@ -7,7 +7,6 @@ import EntertainmentCardSlider from '../components/Entertainment/EntertainmentCa
 //layout Hoc
 import DefaultLayoutHoc from '../layout/Default.layout'
 
-
 const HomePage = () => {
 
     const [recommendedMovies, setRecommendedMovies] = useState([]);
