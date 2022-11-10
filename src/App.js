@@ -1,4 +1,5 @@
 import './App.css';
+import axios from 'axios';
 //routing
 import { Routes, Route } from "react-router-dom"
 //react slick
@@ -10,11 +11,13 @@ import MoviePage from './pages/Movie.page';
 import PlayPage from './pages/Play.page';
 
 function App() {
-  return <Routes>
-    <Route path='/' element={<HomePage />} />
-    <Route path='/movie/:id' element={<MoviePage />} />
-    <Route path='/plays' element={<PlayPage />} />
-  </Routes>
+  return (
+    <Routes>
+      <Route path='/' element={<HomePage />} />
+      <Route path='/movie/:id' element={<MoviePage />} />
+      <Route path='/plays' element={<PlayPage />} />
+    </Routes>
+  );
 }
 
 export default App;

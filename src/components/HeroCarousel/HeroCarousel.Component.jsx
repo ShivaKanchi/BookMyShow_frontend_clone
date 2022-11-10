@@ -76,7 +76,7 @@ const HeroCarousel = () => {
         speed: 2000,
         autoplaySpeed: 4000,
         cssEase: "linear"
-    }
+    };
     const settings = {
         arrows: true,
         slidesToShow: 1,
@@ -85,20 +85,16 @@ const HeroCarousel = () => {
         slideToScroll: 1,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
-        autoplay: true,
-        speed: 1000,
-        autoplaySpeed: 1000,
-        cssEase: "linear"
     };
+
     return (
         <>
-            <div>HeroCarousel</div>
             <div className='lg:hidden '>
 
                 <HeroSlider {...settings}>
                     {
-                        images.map((images) => (
-                            <div className='w-full h-56 md:h-80 py-3'>
+                        images.map((images, index) => (
+                            <div className='w-full h-56 md:h-80 py-3' key={index}>
                                 <img
                                     src={`https://image.tmdb.org/t/p/original${images.backdrop_path}`}
                                     alt='Hero carousel Banner'
@@ -111,12 +107,13 @@ const HeroCarousel = () => {
             <div className='hidden lg:block'>
                 <HeroSlider {...settingsLG}>
                     {
-                        images.map((images) => (
-                            <div className='w-full h-96 px-2 py-3'>
+                        images.map((images, index) => (
+                            <div className='w-full h-96 px-2 py-3' key={index}>
                                 <img
                                     src={`https://image.tmdb.org/t/p/original${images.backdrop_path}`}
-                                    alt='Hero carousel Banner'
-                                    className='w-full rounded-md object-cover' />
+                                    alt='HeroCarouselBanner'
+                                    className='w-full rounded-md object-cover'
+                                />
                             </div>
                         ))
                     }
@@ -125,6 +122,6 @@ const HeroCarousel = () => {
         </>
     );
 
-}
+};
 
-export default HeroCarousel
+export default HeroCarousel;
