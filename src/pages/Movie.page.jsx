@@ -17,6 +17,15 @@ const MoviePage = () => {
     const { movie, setMovie } = useContext(MovieContext);
 
     useEffect(() => {
+        const requestMovie = async () => {
+            const getMovieData = await axios.get(`/movie/${id}`);
+            setMovie(getMovieData.data);
+        };
+        requestMovie();
+    }, [id]);
+
+
+    useEffect(() => {
         const requestCast = async () => {
             const getCast = await axios.get(`/movie/${id}/credits`);
             setCast(getCast.data.cast);
@@ -34,7 +43,7 @@ const MoviePage = () => {
 
     useEffect(() => {
         const requestRecommendedMovies = async () => {
-            const getRecommendedMovies = await axios.get(`/movie/${id}/recommended`);
+            const getRecommendedMovies = await axios.get(`/movie/${id}/recommendations`);
             setRecommendedMovies(getRecommendedMovies.data.results);
         };
         requestRecommendedMovies();
@@ -45,7 +54,7 @@ const MoviePage = () => {
 
     return (
 
-        <div className='my-12 container px-4 lg-ml-20 lg:w-2/1'>
+        <div className='my-12 container px-4 lg-ml-20 lg:w-2/3'>
             <div className='flex flex-col items-start gap-3'>
                 <h1 className='text-gray-800 font-bold gap-3'>
                     About the movie
@@ -56,12 +65,13 @@ const MoviePage = () => {
             <div className='my-8'>
                 <hr />
             </div>
+
             {/*Offers*/}
             <div className='my-8'>
                 <h2 className='text-gray-800 font-bold text-2xl mb-3'>
                     Applicable Offers
                 </h2>
-                <div className='flex flex-col gap-3 lg:flex-row lg:w-3/4'>
+                <div className='flex flex-col gap-3 lg:flex-row '>
 
                     <div className='flex items-start gap-2 bg-yellow-100 border-yellow-400 border-dashed border-2 rounded-md'>
                         <div className='w-8 h-8'>
