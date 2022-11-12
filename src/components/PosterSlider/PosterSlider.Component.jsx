@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import Poster from "../Poster/Poster.Component.jsx";
 
 const PosterSlider = (props) => {
-    const { poster, title, subtitle, isDark } = props;
+    const { poster, title, subtitle, isDark, config } = props;
     const settings = {
         infinite: false,
         speed: 500,
@@ -60,4 +60,4 @@ const PosterSlider = (props) => {
     );
 }
 
-export default PosterSlider;
+export default PosterSlider;    

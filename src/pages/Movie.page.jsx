@@ -5,6 +5,7 @@ import MovieLayoutHoc from '../layout/Movie.layout';
 import axios from 'axios';
 import Slider from 'react-slick';
 import { FaCcVisa, FaCcApplePay } from "react-icons/fa";
+import PosterSlider from "../components/PosterSlider/PosterSlider.Component";
 
 const MoviePage = () => {
     const { id } = useParams();
@@ -12,6 +13,7 @@ const MoviePage = () => {
     const [similarMovies, setSimilarMovies] = useState([]);
     const [recommendedMovies, setRecommendedMovies] = useState([]);
     const { movie, setMovie } = useContext(MovieContext);
+
     useEffect(() => {
         const requestCast = async () => {
             const getCast = await axios.get(`/movie/${id}/credits`);
@@ -99,11 +101,14 @@ const MoviePage = () => {
             </div>
 
             {/* Recommended Movies*/}
-            <div className='my-8'>
+            <div className='my  -8'>
+                <PosterSlider config={settings} title='Recommended Movies' posters={recommendedMovies} isDark={false} />
                 <hr />
             </div>
             {/* Recommended Movies*/}
-
+            <div className='my  -8'>
+                <hr />
+            </div>
         </div>
 
 
