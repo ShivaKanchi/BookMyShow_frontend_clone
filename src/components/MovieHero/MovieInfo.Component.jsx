@@ -33,7 +33,7 @@ const MovieInfo = ({ movie }) => {
                         Rent 149₹
                     </button>
                     <button className='bg-red-600 w-full py-3 text-white font-semibold rounded-lg'>
-                        Buuy 599₹
+                        Buy 599₹
                     </button>
                 </div>
             </div>
