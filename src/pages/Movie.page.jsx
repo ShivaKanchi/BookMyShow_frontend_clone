@@ -7,7 +7,9 @@ import Slider from 'react-slick';
 import { FaCcVisa, FaCcApplePay } from "react-icons/fa";
 import PosterSlider from "../components/PosterSlider/PosterSlider.Component";
 
+
 const MoviePage = () => {
+
     const { id } = useParams();
     const [cast, setCast] = useState([]);
     const [similarMovies, setSimilarMovies] = useState([]);
@@ -32,7 +34,7 @@ const MoviePage = () => {
 
     useEffect(() => {
         const requestRecommendedMovies = async () => {
-            const getRecommendedMovies = await axios.get(`/movie/${id}/similar`);
+            const getRecommendedMovies = await axios.get(`/movie/${id}/recommended`);
             setRecommendedMovies(getRecommendedMovies.data.results);
         };
         requestRecommendedMovies();
@@ -54,7 +56,7 @@ const MoviePage = () => {
             <div className='my-8'>
                 <hr />
             </div>
-
+            {/*Offers*/}
             <div className='my-8'>
                 <h2 className='text-gray-800 font-bold text-2xl mb-3'>
                     Applicable Offers
@@ -91,27 +93,37 @@ const MoviePage = () => {
                 </div>
             </div>
 
-            <div className='my-8'>
-                <hr />
-            </div>
-
             {/* Cast slider*/}
             <div className='my-8'>
                 <hr />
             </div>
 
             {/* Recommended Movies*/}
-            <div className='my  -8'>
-                <PosterSlider config={settings} title='Recommended Movies' posters={recommendedMovies} isDark={false} />
+            <div className='my-8'>
+                <PosterSlider
+                    config={settings}
+                    title='Recommended Movies'
+                    poster={recommendedMovies}
+                    isDark={false}
+                />
                 <hr />
             </div>
+
+            <div className='my-8'>
+                <hr />
+            </div>
+
             {/* Recommended Movies*/}
-            <div className='my  -8'>
+            <div className='my-8'>
+                <PosterSlider
+                    config={settings}
+                    title='Exclusive Movies'
+                    poster={similarMovies}
+                    isDark={false}
+                />
                 <hr />
             </div>
         </div>
-
-
     );
 }
 
