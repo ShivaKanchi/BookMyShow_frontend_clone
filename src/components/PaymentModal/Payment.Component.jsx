@@ -1,11 +1,13 @@
 import { Dialog, Transition } from '@headlessui/react'
-import React, { Fragment, useState } from 'react'
+import React from 'react'
+import { Fragment, useState } from 'react'
 
 const PaymentModal = (setIsOpen, isOpen, price) => {
 
     const closeModal = () => {
         setIsOpen(false);
     }
+
     const launchRazorPay = () => {
         let options = {
             key: "",
@@ -13,7 +15,7 @@ const PaymentModal = (setIsOpen, isOpen, price) => {
             currency: "INR",
             name: "Book My Show Clone",
             description: "Payment for buying or renting movies",
-            image: "",
+            image: "https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png",
             handler: () => {
                 setIsOpen(false);
                 alert('Payment Successful');
@@ -23,7 +25,7 @@ const PaymentModal = (setIsOpen, isOpen, price) => {
 
         let razorPay = window.RazorPay(options);
         razorPay.open();
-    }
+    };
     return (
         <>
             <Transition appear show={isOpen} as={Fragment}>

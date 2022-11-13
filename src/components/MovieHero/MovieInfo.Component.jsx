@@ -20,10 +20,10 @@ const MovieInfo = ({ movie }) => {
                     </h4>
                 </div>
                 <div className='flex items-center gap-3 w-full'>
-                    <button className='bg-red-500 w-full py-3 text-white font-semibold rounded-lg' onClick={rentMovie}>
+                    <button onClick={rentMovie} className='bg-red-500 w-full py-3 text-white font-semibold rounded-lg'>
                         Rent 149₹
                     </button>
-                    <button className='bg-red-600 w-full py-3 text-white font-semibold rounded-lg' onClick={buyMovie}>
+                    <button onClick={buyMovie} className='bg-red-600 w-full py-3 text-white font-semibold rounded-lg'>
                         Buy 599₹
                     </button>
                 </div>

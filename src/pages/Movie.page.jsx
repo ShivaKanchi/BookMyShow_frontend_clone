@@ -182,7 +182,7 @@ const MoviePage = () => {
                         {
                             cast.map((castData) => (
                                 <Cast
-                                    image={cast.Data.pofile_path}
+                                    image={castData.profile_path}
                                     castName={castData.original_name}
                                     role={castData.character}
                                 />
