@@ -9,6 +9,7 @@ function NavSm() {
                 <span className="text-gray-400 text-xs flex items-center cursor-pointer hover:text-white">
                     Mumbai <BiChevronDown />
                 </span>
+
             </div>
             <div className='w-8 h-8'>
                 <BiSearch className='w-full h-full' />
