@@ -9,6 +9,7 @@ const PaymentModal = (setIsOpen, isOpen, price) => {
     }
 
     const launchRazorPay = () => {
+
         let options = {
             key: "",
             amount: price * 100,
