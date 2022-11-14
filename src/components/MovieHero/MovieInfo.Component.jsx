@@ -5,9 +5,11 @@ import PaymentModal from '../PaymentModal/Payment.Component';
 const MovieInfo = ({ movie }) => {
     const genres = movie.genres?.map(({ name }) => name).join(", ");
     const { setIsOpen, isOpen, price, rentMovie, buyMovie } = useContext(MovieContext);
+
     return (
         <>
             <PaymentModal setIsOpen={setIsOpen} isOpen={isOpen} price={price} />
+
             <div className='flex flex-col gap-8 '>
                 <h1 className='text-white text-5xl font-bold'>
                     {movie.original_title}
