@@ -43,7 +43,7 @@ const MovieNavbarLg = () => {
                     />
                 </div>
             </div>
-            <div className='flex items-center gaps-3'>
+            <div className='flex items-center gap-3'>
                 <span className='text-gray-200 text-base flex items-center cursor-pointer hover:text-white'>
                     Mumbai Sub<BiChevronDown />
                 </span>
