@@ -2,7 +2,7 @@ import React from 'react'
 import DefaultLayoutHoc from '../layout/Default.layout'
 //components
 import Poster from "../components/Poster/Poster.Component"
-import PlayFilter from '../components/PlayFilter/PlayFilter.Component'
+import Playfilter from '../components/PlayFilter/PlayFilter.Component'
 
 const PlayPage = () => {
 
@@ -35,11 +35,11 @@ const PlayPage = () => {
                 <div className='lg:w-1/4 p-4 bg-white rounded'>
                     <h2 className='text-2xl font-bold mb-4'>Filters</h2>
                     <div >
-                        <PlayFilter
+                        <Playfilter
                             title="Date"
                             tags={["Today", "Tommorrow", "This Weeknd"]}
                         />
-                        <PlayFilter
+                        <Playfilter
                             title="Language"
                             tags={["English", "Tulu", "Telugu"]}
                         />
