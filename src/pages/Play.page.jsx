@@ -8,7 +8,20 @@ const PlayPage = () => {
 
     return (<>
         <div className='container mx-auto px-4 my-10'>
-            <div className='w-full lg:flex lg:flex-row-reverse gap-4'>
+            <div className='w-full flex flex-col lg:flex-row  gap-4'>
+                <div className='lg:w-1/4 p-4 bg-white rounded'>
+                    <h2 className='text-2xl font-bold mb-4'>Filters</h2>
+                    <div >
+                        <PlayFilter
+                            title="Date"
+                            tags={["Today", "Tommorrow", "This Weeknd"]}
+                        />
+                        <PlayFilter
+                            title="Language"
+                            tags={["English", "Tulu", "Telugu"]}
+                        />
+                    </div>
+                </div>
                 <div className='lg:w-3/4 p-4 ng-white rounded'>
                     <h2 className='text-2xl font-bold mb-4'>
                         Plays in Mumbai
@@ -38,21 +51,7 @@ const PlayPage = () => {
 
                     </div>
                 </div>
-                <div className='lg:w-1/4 p-4 bg-white rounded'>
-                    <h2 className='text-2xl font-bold mb-4'>Filters</h2>
-                    <div >
-                        <PlayFilter
-                            title="Date"
-                            tags={["Today", "Tommorrow", "This Weeknd"]}
-                        />
-                        <PlayFilter
-                            title="Language"
-                            tags={["English", "Tulu", "Telugu"]}
-                        />
-                    </div>
-                </div>
             </div>
-
         </div>
 
     </>)
