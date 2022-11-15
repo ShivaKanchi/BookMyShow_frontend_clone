@@ -7,11 +7,13 @@ const MovieNavbarSm = () => {
     const { movie } = useContext(MovieContext);
     return (
         <>
-            <div className='tex-gray-700 flex items-center justify-center'>
+            <div className='tex-gray-700 flex justify-between'>
                 <div>
-                    <h3 className='text-xl font-bold'>
-                        {movie.original_title}
-                    </h3>
+                    <Link to="/" className='cursor-pointer'>
+                        <h3 className='text-xl font-bold'>
+                            {movie.original_title}
+                        </h3>
+                    </Link>
                 </div>
                 <div className='w-8 h-8'>
                     <BiShareAlt className='w-full h-full' />

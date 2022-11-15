@@ -11,7 +11,7 @@ const PlayPage = () => {
             <div className='w-full flex flex-col lg:flex-row  gap-4'>
                 <div className='lg:w-1/4 p-4 bg-white rounded'>
                     <h2 className='text-2xl font-bold mb-4'>Filters</h2>
-                    <div >
+                    <div className='bo'>
                         <PlayFilter
                             title="Date"
                             tags={["Today", "Tommorrow", "This Weeknd"]}
@@ -21,10 +21,11 @@ const PlayPage = () => {
                             tags={["English", "Tulu", "Telugu"]}
                         />
                     </div>
-                    <div className='absolute bottom-0'>
+                    <div className='flex flex-col bottom-0 pt-9'>
                         <h2 className='text-2xl font-bold mb-4'>Closest event near You</h2>
                         <div >
                             <iframe
+                                title='GoogleMap'
                                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30166.985754601166!2d72.866899!3d19.069311!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x645838d411062c7!2zMTnCsDA0JzA5LjUiTiA3MsKwNTInMDAuOCJF!5e0!3m2!1sen!2sus!4v1668469094677!5m2!1sen!2sus"
                                 width="full"
                                 height="200"

@@ -12,12 +12,12 @@ const MovieHero = () => {
         <>
             <div>
                 {/*mobile screens*/}
-                <div className='lg:hidden w-full'>
+                <div className='lg:hidden w-full flex items-center justify-center px-1'>
                     <img
                         src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
                         alt='coverImage'
                         className='m-4 rounded'
-                        style={{ width: "calc(100%-2rem)" }}
+                        style={{ width: "calc(100%-4rem)" }}
                     />
                 </div>
                 <div className='flex flex-col gap-3 lg:hidden'>

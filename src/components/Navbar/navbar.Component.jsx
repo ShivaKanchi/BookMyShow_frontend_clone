@@ -10,12 +10,16 @@ function NavSm() {
                 <span className="text-gray-400 text-xs flex items-center cursor-pointer hover:text-white">
                     Mumbai <BiChevronDown />
                 </span>
-
+                <Link to='/plays' className='text-gray-200 text-base flex items-center cursor-pointer'>
+                    Plays
+                </Link>
             </div>
             <div className='w-8 h-8'>
                 <BiSearch className='w-full h-full' />
             </div>
+
         </div>
+
     </>;
 }
 function NavMd() {
