@@ -178,10 +178,11 @@ const MoviePage = () => {
                     <h2 className='text-gray-800 font-bold text-2xl mb-4'>
                         Cast and Crew
                     </h2>
-                    <Slider {...settings}>
+                    <Slider {...settingsCast}>
                         {
-                            cast.map((castData) => (
+                            cast.map((castData, index) => (
                                 <Cast
+                                    key={index}
                                     image={castData.profile_path}
                                     castName={castData.original_name}
                                     role={castData.character}
@@ -217,7 +218,8 @@ const MoviePage = () => {
                     />
                     <hr />
                 </div>
-            </div></>
+            </div>
+        </>
     );
 }
 

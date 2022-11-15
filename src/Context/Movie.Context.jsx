@@ -9,7 +9,6 @@ const MovieProvider = ({ children }) => {
         overview: "",
         backdrop_path: "",
         poster_path: ""
-
     });
     const [isOpen, setIsOpen] = useState(false);
     const [price, setPrice] = useState(0);
