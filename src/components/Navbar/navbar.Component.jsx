@@ -10,7 +10,7 @@ function NavSm() {
                 <span className="text-gray-400 text-xs flex items-center cursor-pointer hover:text-white">
                     Mumbai <BiChevronDown />
                 </span>
-                <Link to='/plays' className='text-gray-200 text-base flex items-center cursor-pointer'>
+                <Link to='/plays' className='text-gray-200 cursor-pointer'>
                     Plays
                 </Link>
             </div>
