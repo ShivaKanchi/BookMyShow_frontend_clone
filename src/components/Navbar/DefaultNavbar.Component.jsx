@@ -82,7 +82,7 @@ function NavLg() {
 }
 
 //main component
-const Navbar = () => {
+const DefaultNavbar = () => {
     return (
         < nav className='bg-darkBackground-700 p-4 py-3'>
             {/* Mobile Screen Navbar*/}
@@ -100,4 +100,4 @@ const Navbar = () => {
         </nav>);
 }
 
-export default Navbar;
+export default DefaultNavbar;
