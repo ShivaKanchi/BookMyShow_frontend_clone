@@ -13,18 +13,12 @@ import Cast from '../components/Cast/Cast.Component';
 const MoviePage = () => {
 
     const { id } = useParams();
+    const { movie, setMovie } = useContext(MovieContext);
     const [cast, setCast] = useState([]);
     const [similarMovies, setSimilarMovies] = useState([]);
     const [recommendedMovies, setRecommendedMovies] = useState([]);
-    const [movie, setMovie] = useContext(MovieContext);
 
-    useEffect(() => {
-        const requestMovie = async () => {
-            const getMovieData = await axios.get(`/movie/${id}`);
-            setMovie(getMovieData.data);
-        };
-        requestMovie();
-    }, [id]);
+
 
 
     useEffect(() => {
@@ -49,6 +43,14 @@ const MoviePage = () => {
             setRecommendedMovies(getRecommendedMovies.data.results);
         };
         requestRecommendedMovies();
+    }, [id]);
+
+    useEffect(() => {
+        const requestMovie = async () => {
+            const getMovieData = await axios.get(`/movie/${id}`);
+            setMovie(getMovieData.data)
+        };
+        requestMovie();
     }, [id]);
 
     const settingsCast = {
