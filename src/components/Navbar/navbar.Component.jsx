@@ -1,9 +1,9 @@
-import React from 'react'
-import { BiChevronDown, BiMenu, BiSearch } from 'react-icons/bi'
+import React from 'react';
+import { BiChevronDown, BiMenu, BiSearch } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 
 function NavSm() {
-    return <>
+    return (<>
         <div className='text-white flex items-center justify-between'>
             <div>
                 <h3 className='text-xl font-bold '>It All starts here</h3>
@@ -18,10 +18,10 @@ function NavSm() {
                 <BiSearch className='w-full h-full' />
             </div>
         </div>
-    </>;
+    </>);
 }
 function NavMd() {
-    return <>
+    return (<>
         <div className='flex items-center w-full gap-4'>
             <div className='w-10 h-10'>
                 <Link to='/' className='cursor-pointer' >
@@ -40,10 +40,10 @@ function NavMd() {
                 />
             </div>
         </div>
-    </>;
+    </>);
 }
 function NavLg() {
-    return <>
+    return (<>
         <div className='container flex mx-auto px-4 items-center justify-between'>
             <div className='flex items-center w-1/2 gap-4'>
                 <div className='w-10 h-10'>
@@ -78,7 +78,7 @@ function NavLg() {
                 </div>
             </div>
         </div>
-    </>;
+    </>);
 }
 
 //main component
