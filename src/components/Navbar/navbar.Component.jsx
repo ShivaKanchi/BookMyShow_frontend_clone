@@ -17,9 +17,7 @@ function NavSm() {
             <div className='w-8 h-8'>
                 <BiSearch className='w-full h-full' />
             </div>
-
         </div>
-
     </>;
 }
 function NavMd() {
