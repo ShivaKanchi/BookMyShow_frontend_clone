@@ -1,7 +1,7 @@
 
 # BookMyShow Frontend Clone
 
-Hello, this is a React Frontend project. This is a BookMyShow Frontend clone with a slight alteration to deisgn.
+Hello, this is a React Frontend project. This is a BookMyShow Frontend clone with a slight alteration to design.
 
 #### Project has a 3 pages
 ##### Home(Shows Card of different Movies, Cards)
