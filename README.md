@@ -1,3 +1,28 @@
+
+# BookMyShow Frontend Clone
+
+Hello, this is a React Frontend project. This is a BookMyShow Frontend clone with a slight alteration to deisgn.
+
+#### Project has a 3 pages
+##### Home(Shows Card of different Movies, Cards)
+##### Movie(Shows specific Movie with its casts, related movies, recommended movies on it)
+##### Play(Shows static Upcoming Events)
+ 
+
+## Packages
+
+##### Headless ui
+##### axios
+##### react-slick
+##### react-carousel
+#####  react-icons
+##### react-router-dom
+##### Tailwind
+
+## Api Reference 
+
+I have used a external api for this project named [The Movie Database API](https://developers.themoviedb.org/3).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +93,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
