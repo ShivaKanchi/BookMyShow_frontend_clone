@@ -3,7 +3,7 @@
 
 Hello, this is a React Frontend project. This is a BookMyShow Frontend clone with a slight alteration to design.
 
-#### Project has a 3 pages
+#### Project has 3 pages
 ##### Home(Shows Card of different Movies, Cards)
 ##### Movie(Shows specific Movie with its casts, related movies, recommended movies on it)
 ##### Play(Shows static Upcoming Events)
